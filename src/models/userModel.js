@@ -1,6 +1,6 @@
-import mangoose from "mangoose";
+import mongoose from "mongoose";
 
-const userSchema = new mangoose.Schema({
+const userSchema = new mongoose.Schema({
  username :{
   type: String,
   required: [true, "Please provide a username"],
@@ -34,6 +34,6 @@ verifyTokenExpiry: Date,
 
 })
 
-const User = mangoose.models.users || mangoose.model ("users", userSchema);
+const User = mongoose.models.users || mongoose.model ("users", userSchema);
 
 export default User;
